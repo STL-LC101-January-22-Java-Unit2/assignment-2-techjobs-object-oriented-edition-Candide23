@@ -71,6 +71,15 @@ public class JobTest {
 
     }
 
+    @Test
+    public void  testForToString() {
+        Job newJob3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String testToString = newJob3.toString();
+        char firstChar = testToString.charAt(0);
+        char lastChar = testToString.charAt(testToString.length()-1);
+        assertEquals(firstChar,lastChar);
+    }
+
 
 
 }

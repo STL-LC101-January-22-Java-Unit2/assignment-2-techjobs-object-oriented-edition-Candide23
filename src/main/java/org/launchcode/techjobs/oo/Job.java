@@ -102,13 +102,32 @@ public class Job {
 
     @Override
     public String toString() {
-        return "Job{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", employer=" + employer +
-                ", location=" + location +
-                ", positionType=" + positionType +
-                ", coreCompetency=" + coreCompetency +
-                '}';
+
+        if(this.getName().trim().equals("")){
+           this.setName("Data not available");
+        }
+
+        if(this.getEmployer().getValue().trim().equals("")){
+            this.getEmployer().setValue("Data not available");
+        }
+
+        if(this.getLocation().getValue().trim().equals("")) {
+            this.getLocation().setValue("Data not available");
+        }
+
+        if(this.getPositionType().getValue().trim().equals("")) {
+            this.getPositionType().setValue("Data not available");
+        }
+
+        if(this.getCoreCompetency().getValue().trim().equals("")) {
+            this.getCoreCompetency().setValue("Data not available");
+        }
+        return
+                "\nID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer +
+                "\nLocation: " + location +
+                "\nPosition Type: " + positionType +
+                "\nCore Competency: " + coreCompetency +"\n" ;
     }
 }
