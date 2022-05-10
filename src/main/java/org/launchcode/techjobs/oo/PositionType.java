@@ -29,7 +29,7 @@ public class PositionType extends JobField {
         return "PositionType{" +
                 "value='" + value + '\'' +
                 '}';
-    }
+    }*/
 
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
@@ -40,19 +40,19 @@ public class PositionType extends JobField {
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
         if (!(o instanceof PositionType)) return false;
-        Employer employer = (Employer) o;
-        return getId() == employer.getId();
+        PositionType positionType  = (PositionType) o;
+        return getId() == positionType.getId();
     }
 
     @Override
    public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(getId());
     }
 
 
     // Getters and Setters:
 
-    public int getId() {
+    /*public int getId() {
         return id;
     }
 
